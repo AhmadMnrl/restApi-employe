@@ -36,7 +36,7 @@ employeController.getId = async (req, res, next) => {
 }
 
 employeController.update = async (req, res, next) => {
-    defaultModel.findByIdAndUpdate(req.body.id, req.body, (error, data) => {
+    defaultModel.findByIdAndUpdate( req.params.id, req.body, (error, data) => {
         if (error) {
             console.log(error)
             res.json({
